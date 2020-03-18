@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2FBC4E40-4F38-4D88-A563-108CCCE1B9BB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppBrewTest/RecommendCollectionViewCell.swift"
@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8182A546-FC14-4458-A1FA-1C74882C228D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppBrewTest/PostCellViewModel.swift"
@@ -83,7 +83,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1CDE52C9-2889-440E-A5E1-0BACC51E31A4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppBrewTest/ViewController.swift"
@@ -99,7 +99,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "CCD8461D-F1BC-4B61-93A0-D490A9C320D9"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppBrewTest/View/ViewController/ViewController.swift"
@@ -115,7 +115,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "DD88BB70-6E1D-41F2-A9F6-31CC99EAC31E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppBrewTest/Sources/ViewController/ViewController.swift"
@@ -227,7 +227,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0B307666-907E-4F9E-A2CB-D76E9A363FE8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppBrewTest/Sources/ViewModels/PostViewModel.swift"
@@ -237,6 +237,54 @@
             endingLineNumber = "35"
             landmarkName = "updateItems(page:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1C94A762-F161-4E6C-9162-6AD9124F0F71"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppBrewTest/Sources/ViewModels/PostViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "updateItems(page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1C94A762-F161-4E6C-9162-6AD9124F0F71 - c9e4ee41b2cf1e5a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppBrewTest.PostViewModel.updateItems(page: Swift.Int) -&gt; ()"
+                  moduleName = "AppBrewTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaishisato/AppbrewTest/AppBrewTest/Sources/ViewModels/PostViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "219">
+               </Location>
+               <Location
+                  uuid = "1C94A762-F161-4E6C-9162-6AD9124F0F71 - fd535473761d386c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (AppBrewTest.Posts) -&gt; () in AppBrewTest.PostViewModel.updateItems(page: Swift.Int) -&gt; ()"
+                  moduleName = "AppBrewTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kaishisato/AppbrewTest/AppBrewTest/Sources/ViewModels/PostViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "353">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

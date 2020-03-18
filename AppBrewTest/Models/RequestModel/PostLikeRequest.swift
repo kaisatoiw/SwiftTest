@@ -18,7 +18,7 @@ struct PostLikeRequest: RequestProtocol {
 
     var method: HTTPMethod
     
-    var path: String { // 先ほど定enumで定義したもの
+    var path: String {
         return APIConstants.likes.path
     }
     

@@ -11,8 +11,6 @@ import SDWebImage
 import RxRelay
 import RxSwift
 class RecommendCollectionViewCell: UICollectionViewCell {
-    static let cellHeight: CGFloat = 300
-    static let cellMargin: CGFloat = 4.0
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var mainImageView: UIImageView!

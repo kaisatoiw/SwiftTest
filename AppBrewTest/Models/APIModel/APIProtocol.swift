@@ -20,15 +20,14 @@ protocol APIProtocol {
 
 extension APIProtocol {
 
-    var baseURL: URL { // 先ほど上で定義したもの。
-        // 絶対にあることがある保証されているので「try！」を使用している
+    var baseURL: URL {
         return try! APIConstants.baseURL.asURL()
     }
 
-    var headers: HTTPHeaders? { // 先ほど上で定義したもの。なければ「return nil」でok
+    var headers: HTTPHeaders? {
         return APIConstants.header
     }
-    var decode: (String) throws -> ResponseType { // decoderはあとで用意するので注意
+    var decode: (String) throws -> ResponseType {
         return {
             try JSONDecoder().decode(ResponseType.self, from: ($0.data(using: .utf8))!)
         }

@@ -26,7 +26,6 @@ struct APICliant {
     
     // MARK: Static Methods
     
-    // 実際に呼び出すのはこれだけ。（rxを隠蔽化しているだけなので、observeでも大丈夫）
     static func call<T, V>(_ request: T, _ disposeBag: DisposeBag, onSuccess: @escaping (V) -> Void, onError: @escaping (Error) -> Void)
         where T: RequestProtocol, T.ResponseType == V {
             
@@ -36,14 +35,12 @@ struct APICliant {
                 .disposed(by: disposeBag)
     }
     
-    // RxSwiftを導入している部分。成功/失敗いずれかしか返らないSingleにしてある。
     static func observe<T, V>(_ request: T) -> Single<V>
         where T: RequestProtocol, T.ResponseType == V {
             
             return Single.create { observer in
                 let caller = callForData(request) { response in
                     switch response {
-                    //※ 既にsuccessしているので「as! V」で強制キャストしている（できる）
                     case .success(let result): observer(.success(result as! V))
                     case .failure(let error): observer(.error(error))
                     }
@@ -55,7 +52,6 @@ struct APICliant {
             }
     }
     
-    // Alamofire呼び出し部分
     private static func callForData<T, V>(_ req: T, completion: @escaping (APIResult) -> Void) -> DataRequest
         where T: RequestProtocol, T.ResponseType == V {
             
@@ -69,7 +65,6 @@ struct APICliant {
             }
     }
     
-    // Alamofireのメソッドのみ切り出した部分
     private static func request<T>(_ req: T) -> DataRequest
         where T: RequestProtocol {
             return Alamofire

@@ -15,8 +15,6 @@ protocol RequestProtocol: APIProtocol, URLRequestConvertible {
 
 extension RequestProtocol {
     var encoding: URLEncoding {
-        // parameter の変換の仕方を設定
-        // defaultの場合、get→quertString、post→httpBodyとよしなに行ってくれる
         return URLEncoding.default
     }
 

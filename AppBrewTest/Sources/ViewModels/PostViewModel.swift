@@ -29,7 +29,6 @@ struct PostViewModel {
             var sections: [PostSectionModel] = page == 1 ? [] : self.items.value
             sections.append(PostSectionModel(model: .post, items:ps))
             self.items.accept(sections)
-            self.items.value.count
             self.isLoading.accept(false)
         }, onError: { error in
             print(error)

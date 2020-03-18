@@ -22,8 +22,8 @@
 		15BF649824153285006F865F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BF649624153285006F865F /* LaunchScreen.storyboard */; };
 		15BF64A324153285006F865F /* AppBrewTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF64A224153285006F865F /* AppBrewTestTests.swift */; };
 		15BF64AE24153286006F865F /* AppBrewTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF64AD24153286006F865F /* AppBrewTestUITests.swift */; };
-		15BF64BD241534AD006F865F /* RecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF64BB241534AD006F865F /* RecommendCollectionViewCell.swift */; };
-		15BF64BE241534AD006F865F /* RecommendCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BF64BC241534AD006F865F /* RecommendCollectionViewCell.xib */; };
+		15BF64BD241534AD006F865F /* PostWithImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF64BB241534AD006F865F /* PostWithImageCollectionViewCell.swift */; };
+		15BF64BE241534AD006F865F /* PostWithImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BF64BC241534AD006F865F /* PostWithImageCollectionViewCell.xib */; };
 		15BF64C024153BFA006F865F /* PostsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF64BF24153BFA006F865F /* PostsResponse.swift */; };
 		15BF64C224153CC7006F865F /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF64C124153CC7006F865F /* PostResponse.swift */; };
 		15BF64C424153E68006F865F /* ImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF64C324153E68006F865F /* ImageResponse.swift */; };
@@ -83,8 +83,8 @@
 		15BF64A924153286006F865F /* AppBrewTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppBrewTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BF64AD24153286006F865F /* AppBrewTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBrewTestUITests.swift; sourceTree = "<group>"; };
 		15BF64AF24153286006F865F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15BF64BB241534AD006F865F /* RecommendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewCell.swift; sourceTree = "<group>"; };
-		15BF64BC241534AD006F865F /* RecommendCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCollectionViewCell.xib; sourceTree = "<group>"; };
+		15BF64BB241534AD006F865F /* PostWithImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWithImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		15BF64BC241534AD006F865F /* PostWithImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostWithImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		15BF64BF24153BFA006F865F /* PostsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsResponse.swift; sourceTree = "<group>"; };
 		15BF64C124153CC7006F865F /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 		15BF64C324153E68006F865F /* ImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
@@ -187,8 +187,8 @@
 		152DC5C424222F0D00A29680 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				15BF64BB241534AD006F865F /* RecommendCollectionViewCell.swift */,
-				15BF64BC241534AD006F865F /* RecommendCollectionViewCell.xib */,
+				15BF64BB241534AD006F865F /* PostWithImageCollectionViewCell.swift */,
+				15BF64BC241534AD006F865F /* PostWithImageCollectionViewCell.xib */,
 				152DC5BC2422232500A29680 /* RateView.swift */,
 				152DC5B8242213F600A29680 /* PostNoImgaeCollectionViewCell.swift */,
 				152DC5BE2422233900A29680 /* RateView.xib */,
@@ -416,7 +416,7 @@
 				152DC5BF2422233900A29680 /* RateView.xib in Resources */,
 				15BF649824153285006F865F /* LaunchScreen.storyboard in Resources */,
 				152DC5BB242213F600A29680 /* PostNoImgaeCollectionViewCell.xib in Resources */,
-				15BF64BE241534AD006F865F /* RecommendCollectionViewCell.xib in Resources */,
+				15BF64BE241534AD006F865F /* PostWithImageCollectionViewCell.xib in Resources */,
 				15BF649524153285006F865F /* Assets.xcassets in Resources */,
 				15BF649324153284006F865F /* Main.storyboard in Resources */,
 			);
@@ -567,7 +567,7 @@
 				152DC5BD2422232500A29680 /* RateView.swift in Sources */,
 				15BF64C024153BFA006F865F /* PostsResponse.swift in Sources */,
 				15BF64CC241540A0006F865F /* ProductResponse.swift in Sources */,
-				15BF64BD241534AD006F865F /* RecommendCollectionViewCell.swift in Sources */,
+				15BF64BD241534AD006F865F /* PostWithImageCollectionViewCell.swift in Sources */,
 				15BF64CA24153FD5006F865F /* ProductTagResponse.swift in Sources */,
 				15236DFC241FCEBA006050AE /* PostViewModel.swift in Sources */,
 				15BF64C424153E68006F865F /* ImageResponse.swift in Sources */,

@@ -190,16 +190,24 @@ struct R: Rswift.Validatable {
   struct nib {
     /// Nib `PostNoImgaeCollectionViewCell`.
     static let postNoImgaeCollectionViewCell = _R.nib._PostNoImgaeCollectionViewCell()
+    /// Nib `PostWithImageCollectionViewCell`.
+    static let postWithImageCollectionViewCell = _R.nib._PostWithImageCollectionViewCell()
     /// Nib `RateView`.
     static let rateView = _R.nib._RateView()
-    /// Nib `RecommendCollectionViewCell`.
-    static let recommendCollectionViewCell = _R.nib._RecommendCollectionViewCell()
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "PostNoImgaeCollectionViewCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.postNoImgaeCollectionViewCell) instead")
     static func postNoImgaeCollectionViewCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.postNoImgaeCollectionViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "PostWithImageCollectionViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.postWithImageCollectionViewCell) instead")
+    static func postWithImageCollectionViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.postWithImageCollectionViewCell)
     }
     #endif
 
@@ -211,24 +219,16 @@ struct R: Rswift.Validatable {
     }
     #endif
 
-    #if os(iOS) || os(tvOS)
-    /// `UINib(name: "RecommendCollectionViewCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.recommendCollectionViewCell) instead")
-    static func recommendCollectionViewCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.recommendCollectionViewCell)
-    }
-    #endif
-
     static func postNoImgaeCollectionViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> PostNoImgaeCollectionViewCell? {
       return R.nib.postNoImgaeCollectionViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? PostNoImgaeCollectionViewCell
     }
 
-    static func rateView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.rateView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    static func postWithImageCollectionViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> PostWithImageCollectionViewCell? {
+      return R.nib.postWithImageCollectionViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? PostWithImageCollectionViewCell
     }
 
-    static func recommendCollectionViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> RecommendCollectionViewCell? {
-      return R.nib.recommendCollectionViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RecommendCollectionViewCell
+    static func rateView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.rateView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
     fileprivate init() {}
@@ -238,8 +238,8 @@ struct R: Rswift.Validatable {
   struct reuseIdentifier {
     /// Reuse identifier `PostNoImgaeCollectionViewCell`.
     static let postNoImgaeCollectionViewCell: Rswift.ReuseIdentifier<PostNoImgaeCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "PostNoImgaeCollectionViewCell")
-    /// Reuse identifier `RecommendCollectionViewCell`.
-    static let recommendCollectionViewCell: Rswift.ReuseIdentifier<RecommendCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "RecommendCollectionViewCell")
+    /// Reuse identifier `PostWithImageCollectionViewCell`.
+    static let postWithImageCollectionViewCell: Rswift.ReuseIdentifier<PostWithImageCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "PostWithImageCollectionViewCell")
 
     fileprivate init() {}
   }
@@ -271,8 +271,8 @@ struct _R: Rswift.Validatable {
   struct nib: Rswift.Validatable {
     static func validate() throws {
       try _PostNoImgaeCollectionViewCell.validate()
+      try _PostWithImageCollectionViewCell.validate()
       try _RateView.validate()
-      try _RecommendCollectionViewCell.validate()
     }
 
     struct _PostNoImgaeCollectionViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
@@ -298,6 +298,29 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
 
+    struct _PostWithImageCollectionViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
+      typealias ReusableType = PostWithImageCollectionViewCell
+
+      let bundle = R.hostingBundle
+      let identifier = "PostWithImageCollectionViewCell"
+      let name = "PostWithImageCollectionViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> PostWithImageCollectionViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? PostWithImageCollectionViewCell
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "ic_16_balloon", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_16_balloon' is used in nib 'PostWithImageCollectionViewCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "ic_16_clip", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_16_clip' is used in nib 'PostWithImageCollectionViewCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "ic_16_heart", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_16_heart' is used in nib 'PostWithImageCollectionViewCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "nihonjin_-_1", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'nihonjin_-_1' is used in nib 'PostWithImageCollectionViewCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
+    }
+
     struct _RateView: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "RateView"
@@ -308,29 +331,6 @@ struct _R: Rswift.Validatable {
 
       static func validate() throws {
         if UIKit.UIImage(named: "ic_09_star", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_09_star' is used in nib 'RateView', but couldn't be loaded.") }
-        if #available(iOS 11.0, tvOS 11.0, *) {
-        }
-      }
-
-      fileprivate init() {}
-    }
-
-    struct _RecommendCollectionViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
-      typealias ReusableType = RecommendCollectionViewCell
-
-      let bundle = R.hostingBundle
-      let identifier = "RecommendCollectionViewCell"
-      let name = "RecommendCollectionViewCell"
-
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> RecommendCollectionViewCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RecommendCollectionViewCell
-      }
-
-      static func validate() throws {
-        if UIKit.UIImage(named: "ic_16_balloon", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_16_balloon' is used in nib 'RecommendCollectionViewCell', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "ic_16_clip", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_16_clip' is used in nib 'RecommendCollectionViewCell', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "ic_16_heart", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_16_heart' is used in nib 'RecommendCollectionViewCell', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "nihonjin_-_1", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'nihonjin_-_1' is used in nib 'RecommendCollectionViewCell', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }

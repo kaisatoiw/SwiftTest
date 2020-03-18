@@ -41,7 +41,7 @@ class TimeLineViewController: UIViewController {
         guard let _self = self else { return UICollectionViewCell() }
         switch item {
         case .postWithImage(let post):
-            guard let cell = _self.postWithImageCell(indexPath: indexPath, post: post) as? RecommendCollectionViewCell else {
+            guard let cell = _self.postWithImageCell(indexPath: indexPath, post: post) as? PostWithImageCollectionViewCell else {
                 return UICollectionViewCell()
             }
             return cell
@@ -70,7 +70,7 @@ extension TimeLineViewController {
     private func setupCollectionView() {
         refreshControl = UIRefreshControl()
         collectionView.refreshControl = refreshControl
-        collectionView.register(UINib(resource: R.nib.recommendCollectionViewCell), forCellWithReuseIdentifier: R.nib.recommendCollectionViewCell.identifier)
+        collectionView.register(UINib(resource: R.nib.postWithImageCollectionViewCell), forCellWithReuseIdentifier: R.nib.postWithImageCollectionViewCell.identifier)
         collectionView.register(UINib(resource: R.nib.postNoImgaeCollectionViewCell), forCellWithReuseIdentifier: R.nib.postNoImgaeCollectionViewCell.identifier)
         collectionView.rx.setDelegate(self).disposed(by: disposeBag)
     }
@@ -101,10 +101,30 @@ extension TimeLineViewController {
                 }
                 _self.viewModel.updateItems(page: page)
             }).disposed(by: disposeBag)
+
+        viewModel.error.asObservable()
+        .subscribe(onNext: { [weak self] error in
+            guard let _self = self, let error = error else {
+                return
+            }
+            _self.errorAlert(error)
+        }).disposed(by: disposeBag)
+    }
+    func errorAlert(_ error: Error) {
+        let alert: UIAlertController = UIAlertController(title: "エラー", message: "通信に失敗しました", preferredStyle:  UIAlertController.Style.alert)
+        let defaultAction: UIAlertAction = UIAlertAction(title: "リトライ", style: UIAlertAction.Style.default, handler:{
+            (action: UIAlertAction!) -> Void in
+            self.viewModel.page.accept(1)
+            self.viewModel.error.accept(nil)
+        })
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler: nil)
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func postWithImageCell(indexPath: IndexPath, post: Post) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.nib.recommendCollectionViewCell.name, for: indexPath) as? RecommendCollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.nib.postWithImageCollectionViewCell.name, for: indexPath) as? PostWithImageCollectionViewCell {
             cell.update(post: post)
             return cell
         }

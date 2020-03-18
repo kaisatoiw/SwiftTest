@@ -1,5 +1,5 @@
 //
-//  RecommendCollectionViewCell.swift
+//  PostWithImageCollectionViewCell.swift
 //  AppBrewTest
 //
 //  Created by Kaishi Sato on 2020/03/08.
@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 import RxRelay
 import RxSwift
-class RecommendCollectionViewCell: UICollectionViewCell {
+class PostWithImageCollectionViewCell: UICollectionViewCell {
     static let cellHeight: CGFloat = 300
     static let cellMargin: CGFloat = 4.0
     @IBOutlet weak var nameLabel: UILabel!
@@ -92,6 +92,14 @@ class RecommendCollectionViewCell: UICollectionViewCell {
                     return
                 }
                 _self.likeCountLabel.text = "\(_self.viewModel.likeCount.value)"
+            }).disposed(by: disposeBug)
+
+        viewModel.error.asObservable()
+            .subscribe(onNext: { [weak self] error in
+                guard let _self = self, let error = error else {
+                    return
+                }
+                
             }).disposed(by: disposeBug)
     }
     

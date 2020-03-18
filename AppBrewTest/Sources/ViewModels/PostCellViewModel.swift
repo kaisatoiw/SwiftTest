@@ -12,6 +12,7 @@ import RxRelay
 struct PostCellViewModel {
     let likeState: BehaviorRelay<Bool> = BehaviorRelay(value: false)
     let likeCount: BehaviorRelay<Int> = BehaviorRelay(value: 0)
+    let error: BehaviorRelay<Error?> = BehaviorRelay(value: nil)
     var id = 0
     let disposeBag = DisposeBag()
     func postLike(id: Int, isLiked: Bool) {
@@ -21,7 +22,7 @@ struct PostCellViewModel {
             self.likeState.accept(!self.likeState.value)
             self.likeCount.accept(self.likeState.value ? self.likeCount.value + 1 : self.likeCount.value - 1)
         }, onError: { error in
-            print(error)
+            self.error.accept(error)
         })
     }
 

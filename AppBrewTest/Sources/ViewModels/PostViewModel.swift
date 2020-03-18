@@ -16,6 +16,7 @@ struct PostViewModel {
     let items = BehaviorRelay<[PostSectionModel]>(value: [])
     let disposeBag = DisposeBag()
     var isLoading = BehaviorRelay<Bool>(value: false)
+    let error: BehaviorRelay<Error?> = BehaviorRelay(value: nil)
     var page = BehaviorRelay<Int>(value: 1)
     func updateItems(page: Int = 1) {
         let param: [String: Any] = ["page": page]
@@ -31,17 +32,8 @@ struct PostViewModel {
             self.items.accept(sections)
             self.isLoading.accept(false)
         }, onError: { error in
-            print(error)
-        })
-    }
-    
-    func postLike(id: Int, isLiked: Bool) {
-        let param: [String: Any] = ["likeable_type": "Post", "likeable_id": id]
-        let req = PostLikeRequest(param: param, method: isLiked ? .post : .delete)
-        APICliant.call(req, disposeBag, onSuccess: { result in
-            print(result)
-        }, onError: { error in
-            print(error)
+            self.error.accept(error)
+            self.isLoading.accept(false)
         })
     }
 }

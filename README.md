@@ -3,7 +3,7 @@ Appbrewテスト用
 
 ## Building the code
 ```
-$ git clone https://github.com/kaisatoiw/AppbrewTest.git
+$ git clone https://your-username@github.com/kaisatoiw/AppbrewTest.git
 $ cd AppbrewTest
 $ pod install
 ```

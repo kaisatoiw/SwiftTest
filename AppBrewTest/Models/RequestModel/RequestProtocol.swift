@@ -28,7 +28,7 @@ extension RequestProtocol {
         // headersを設定
         urlRequest.allHTTPHeaderFields = headers
         // timeout時間を設定
-        urlRequest.timeoutInterval = TimeInterval(30)
+        urlRequest.timeoutInterval = TimeInterval(10)
 
         // requestごとの　parameterを設定
         if let params = parameters {

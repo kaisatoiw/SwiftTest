@@ -70,7 +70,6 @@ extension TimeLineViewController {
     private func setupCollectionView() {
         refreshControl = UIRefreshControl()
         collectionView.refreshControl = refreshControl
-        collectionView.contentInset.top = RecommendCollectionViewCell.cellMargin
         collectionView.register(UINib(resource: R.nib.recommendCollectionViewCell), forCellWithReuseIdentifier: R.nib.recommendCollectionViewCell.identifier)
         collectionView.register(UINib(resource: R.nib.postNoImgaeCollectionViewCell), forCellWithReuseIdentifier: R.nib.postNoImgaeCollectionViewCell.identifier)
         collectionView.rx.setDelegate(self).disposed(by: disposeBag)

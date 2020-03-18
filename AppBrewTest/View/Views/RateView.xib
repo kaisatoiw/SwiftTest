@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RateView" customModule="AppBrewTest" customModuleProvider="target">
+            <connections>
+                <outlet property="fifthStar" destination="UtF-b5-d4T" id="fL7-Xk-oj5"/>
+                <outlet property="fisrtStar" destination="iA1-h7-vKI" id="wln-4F-4M9"/>
+                <outlet property="fourthStar" destination="ZTm-pe-c21" id="exa-c7-F8j"/>
+                <outlet property="secondStar" destination="tcN-3E-eVM" id="BDp-Wf-9Yr"/>
+                <outlet property="thirdStar" destination="OPp-WQ-1Hw" id="tue-bL-DU8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view userInteractionEnabled="NO" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="8.5"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_09_star" translatesAutoresizingMaskIntoConstraints="NO" id="iA1-h7-vKI" userLabel="first">
+                    <rect key="frame" x="0.0" y="0.0" width="8.5" height="8.5"/>
+                    <color key="tintColor" red="0.36862745099999999" green="0.2470588235" blue="0.2470588235" alpha="0.2079409247" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="iA1-h7-vKI" secondAttribute="height" multiplier="1:1" id="g7i-xl-WIg"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_09_star" translatesAutoresizingMaskIntoConstraints="NO" id="tcN-3E-eVM" userLabel="second">
+                    <rect key="frame" x="11.5" y="0.0" width="8.5" height="8.5"/>
+                    <color key="tintColor" red="0.36862745098039218" green="0.24705882352941178" blue="0.24705882352941178" alpha="0.20794092465753425" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="tcN-3E-eVM" secondAttribute="height" multiplier="1:1" id="wzT-gI-1gZ"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_09_star" translatesAutoresizingMaskIntoConstraints="NO" id="OPp-WQ-1Hw" userLabel="third">
+                    <rect key="frame" x="23" y="0.0" width="8.5" height="8.5"/>
+                    <color key="tintColor" red="0.36862745099999999" green="0.2470588235" blue="0.2470588235" alpha="0.2079409247" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="OPp-WQ-1Hw" secondAttribute="height" multiplier="1:1" id="i7v-yc-uEk"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_09_star" translatesAutoresizingMaskIntoConstraints="NO" id="ZTm-pe-c21" userLabel="fourth">
+                    <rect key="frame" x="34.5" y="0.0" width="8.5" height="8.5"/>
+                    <color key="tintColor" red="0.36862745099999999" green="0.2470588235" blue="0.2470588235" alpha="0.2079409247" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ZTm-pe-c21" secondAttribute="height" multiplier="1:1" id="oJD-nQ-RrG"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_09_star" translatesAutoresizingMaskIntoConstraints="NO" id="UtF-b5-d4T" userLabel="fifth">
+                    <rect key="frame" x="46" y="0.0" width="8.5" height="8.5"/>
+                    <color key="tintColor" red="0.36862745099999999" green="0.2470588235" blue="0.2470588235" alpha="0.2079409247" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="UtF-b5-d4T" secondAttribute="height" multiplier="1:1" id="6vs-S3-QPO"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <accessibility key="accessibilityConfiguration" identifier="RateView"/>
+            <constraints>
+                <constraint firstItem="ZTm-pe-c21" firstAttribute="leading" secondItem="OPp-WQ-1Hw" secondAttribute="trailing" constant="3" id="082-lx-zHM"/>
+                <constraint firstAttribute="bottom" secondItem="ZTm-pe-c21" secondAttribute="bottom" id="DVR-aq-1xc"/>
+                <constraint firstItem="iA1-h7-vKI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EeU-Tl-RMd"/>
+                <constraint firstItem="OPp-WQ-1Hw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FEU-Dv-HDY"/>
+                <constraint firstItem="tcN-3E-eVM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GsN-PL-HlQ"/>
+                <constraint firstAttribute="bottom" secondItem="iA1-h7-vKI" secondAttribute="bottom" id="QoJ-RD-bea"/>
+                <constraint firstAttribute="bottom" secondItem="UtF-b5-d4T" secondAttribute="bottom" id="RD5-bf-J0B"/>
+                <constraint firstAttribute="bottom" secondItem="tcN-3E-eVM" secondAttribute="bottom" id="UF3-S9-f38"/>
+                <constraint firstItem="ZTm-pe-c21" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Wou-EQ-yR5"/>
+                <constraint firstItem="UtF-b5-d4T" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XWd-OV-wLI"/>
+                <constraint firstItem="UtF-b5-d4T" firstAttribute="leading" secondItem="ZTm-pe-c21" secondAttribute="trailing" constant="3" id="e88-dY-0s4"/>
+                <constraint firstItem="tcN-3E-eVM" firstAttribute="leading" secondItem="iA1-h7-vKI" secondAttribute="trailing" constant="3" id="gwu-Yv-LCg"/>
+                <constraint firstItem="OPp-WQ-1Hw" firstAttribute="leading" secondItem="tcN-3E-eVM" secondAttribute="trailing" constant="3" id="hQ6-r2-sut"/>
+                <constraint firstItem="iA1-h7-vKI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ojB-xZ-GBe"/>
+                <constraint firstAttribute="bottom" secondItem="OPp-WQ-1Hw" secondAttribute="bottom" id="wTk-ds-Xqx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="4.3478260869565224" y="391.40625"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_09_star" width="9" height="9"/>
+    </resources>
+</document>

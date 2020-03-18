@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "RecommendCollectionViewCell.update(post:):RecommendCollectionViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "likeButton.titleLabel?.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static APICliant.call&lt;A, B&gt;(_:_:onSuccess:onError:):APIClient.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(onSuccess.self)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static APICliant.request&lt;A&gt;(_:):APIClient.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(req)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in RecommendCollectionViewCell.update(name:description:iconImageUrl:mainImageUrl:):RecommendCollectionViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "NSLayoutConstraint.Attribute.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in static APICliant.observe&lt;A, B&gt;(_:):APIClient.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(response)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "APIProtocol.decode.getter:APIProtocol.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print($0)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in APIProtocol.decode.getter:APIProtocol.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ResponseType.self">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in static APICliant.callForData&lt;A, B&gt;(_:completion:):APIClient.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "error.localizedDescription">
+            </PersistentString>
+            <PersistentString
+               value = "print(error)">
+            </PersistentString>
+            <PersistentString
+               value = "print(response)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

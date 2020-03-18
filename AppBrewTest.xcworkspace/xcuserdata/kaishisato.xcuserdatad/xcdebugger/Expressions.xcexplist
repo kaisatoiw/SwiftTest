@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ViewController.postNoImageCell(indexPath:post:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "R.nib.postNoImgaeCollectionViewCell.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.collectionView(_:layout:sizeForItemAt:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell?.mainImageView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RecommendCollectionViewCell.setupView():RecommendCollectionViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "likeButton.bounds.width">
+            </PersistentString>
+            <PersistentString
+               value = "likeButton.imageView?.layer.frame.size">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RecommendCollectionViewCell.update(post:):RecommendCollectionViewCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "RecommendCollectionViewCell.preferredLayoutAttributesFitting(_:):RecommendCollectionViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mainImageView.image?.size">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in RecommendCollectionViewCell.update(post:):RecommendCollectionViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "image?.size">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

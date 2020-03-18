@@ -50,6 +50,7 @@ class PostNoImgaeCollectionViewCell: UICollectionViewCell {
         likeButton.imageView?.contentMode = .scaleAspectFill
         likeButton.contentHorizontalAlignment = .fill
         likeButton.contentVerticalAlignment = .fill
+        likeButton.imageEdgeInsets = UIEdgeInsets(top: 8, left: 7, bottom: 8, right: 7)
         productImageView.layer.cornerRadius = productImageView.bounds.height / 2
         productImageView.clipsToBounds = true
         productImageView.layer.borderWidth = 0.5

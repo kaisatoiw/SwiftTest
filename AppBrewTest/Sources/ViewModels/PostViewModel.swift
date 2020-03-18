@@ -26,9 +26,10 @@ struct PostViewModel {
                 let item = post.images.isEmpty ? PostItem.postNoImage(post: post) : PostItem.postWithImage(post: post)
                 ps.append(item)
             }
-            var sections: [PostSectionModel] = self.items.value
+            var sections: [PostSectionModel] = page == 1 ? [] : self.items.value
             sections.append(PostSectionModel(model: .post, items:ps))
             self.items.accept(sections)
+            self.items.value.count
             self.isLoading.accept(false)
         }, onError: { error in
             print(error)

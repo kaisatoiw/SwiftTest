@@ -13,8 +13,6 @@ import RxSwift
 class RecommendCollectionViewCell: UICollectionViewCell {
     static let cellHeight: CGFloat = 300
     static let cellMargin: CGFloat = 4.0
-    @IBOutlet weak var mainImageWidth: NSLayoutConstraint!
-    @IBOutlet weak var mainImageStackView: UIStackView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var mainImageView: UIImageView!
@@ -28,7 +26,6 @@ class RecommendCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var brandNameLabel: UILabel!
     @IBOutlet weak var lineView: UIView!
-    @IBOutlet weak var mainImageAspect: NSLayoutConstraint!
     @IBOutlet weak var rateView: RateView!
 
     private let disposeBug = DisposeBag()
@@ -106,19 +103,14 @@ class RecommendCollectionViewCell: UICollectionViewCell {
         clipCountLabel.text = "\(post.clip_count)"
         nameLabel.text = post.user.nickname
         descriptionLabel.text = post.abstract
-        if let mainUrl = post.images.first??.thumb_url, let iconUrl = post.user.profile_image?.small_url, let height = post.images.first??.height, let width = post.images.first??.width {
+        if let mainUrl = post.images.first??.thumb_url, let iconUrl = post.user.profile_image?.small_url {
             iconImageView.sd_setImage(with: URL(string: iconUrl))
             mainImageView?.sd_setImage(with: URL(string: mainUrl))
-            mainImageAspect.constant = CGFloat((height / width))
-//            mainImageWidth.constant = UIScreen.main.bounds.width / 2.3
-//            setNeedsLayout()
-//            layoutIfNeeded()
-        } else {
-            mainImageView.image = nil
-            mainImageView.isHidden = true
-            mainImageStackView.isHidden = true
         }
         if let productTag = post.product_tags.first {
+            productView.isHidden = false
+            lineView.isHidden = false
+            rateView.isHidden = false
             rateView.setRate(rate: productTag?.rate ?? 0)
             productNameLabel.text = productTag?.product.name
             brandNameLabel.text = productTag?.product.brand?.name
@@ -126,6 +118,7 @@ class RecommendCollectionViewCell: UICollectionViewCell {
         } else {
             productView.isHidden = true
             lineView.isHidden = true
+            rateView.isHidden = true
         }
         
     }
@@ -140,9 +133,15 @@ class RecommendCollectionViewCell: UICollectionViewCell {
         descriptionLabel.text = nil
         mainImageView.image = nil
         iconImageView.image = nil
-        likeButton.titleLabel?.text = nil
+        productImageView.image = nil
+        productNameLabel.text = nil
+        brandNameLabel.text = nil
+        likeCountLabel.text = nil
+        commentCountLabel.text = nil
+        clipCountLabel.text = nil
         mainImageView.sd_cancelCurrentImageLoad()
         iconImageView.sd_cancelCurrentImageLoad()
+        productImageView.sd_cancelCurrentImageLoad()
     }
 
     func changeState(state: Bool) {

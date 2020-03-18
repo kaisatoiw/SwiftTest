@@ -16,7 +16,7 @@
 		152DC5BF2422233900A29680 /* RateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152DC5BE2422233900A29680 /* RateView.xib */; };
 		152DC5C824222FF100A29680 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152DC5C724222FF100A29680 /* SceneDelegate.swift */; };
 		15BF648C24153284006F865F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF648B24153284006F865F /* AppDelegate.swift */; };
-		15BF649024153284006F865F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF648F24153284006F865F /* ViewController.swift */; };
+		15BF649024153284006F865F /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BF648F24153284006F865F /* TimeLineViewController.swift */; };
 		15BF649324153284006F865F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BF649124153284006F865F /* Main.storyboard */; };
 		15BF649524153285006F865F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15BF649424153285006F865F /* Assets.xcassets */; };
 		15BF649824153285006F865F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BF649624153285006F865F /* LaunchScreen.storyboard */; };
@@ -72,7 +72,7 @@
 		152DC5C724222FF100A29680 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		15BF648824153284006F865F /* AppBrewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppBrewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BF648B24153284006F865F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		15BF648F24153284006F865F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		15BF648F24153284006F865F /* TimeLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		15BF649224153284006F865F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15BF649424153285006F865F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15BF649724153285006F865F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -165,20 +165,20 @@
 			path = RequestModel;
 			sourceTree = "<group>";
 		};
-		152DC5C224222EDE00A29680 /* View */ = {
+		152DC5C224222EDE00A29680 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				152DC5C524222F2E00A29680 /* ViewModels */,
 				152DC5C424222F0D00A29680 /* Views */,
 				152DC5C324222EEE00A29680 /* ViewController */,
 			);
-			path = View;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		152DC5C324222EEE00A29680 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				15BF648F24153284006F865F /* ViewController.swift */,
+				15BF648F24153284006F865F /* TimeLineViewController.swift */,
 				15BF649124153284006F865F /* Main.storyboard */,
 			);
 			path = ViewController;
@@ -244,7 +244,7 @@
 			children = (
 				152DC5C724222FF100A29680 /* SceneDelegate.swift */,
 				152DC5C624222F6900A29680 /* Models */,
-				152DC5C224222EDE00A29680 /* View */,
+				152DC5C224222EDE00A29680 /* Sources */,
 				15BF648B24153284006F865F /* AppDelegate.swift */,
 				15BF649424153285006F865F /* Assets.xcassets */,
 				15BF649624153285006F865F /* LaunchScreen.storyboard */,
@@ -549,7 +549,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				590651392420CCB4001930B3 /* SingleResponse.swift in Sources */,
-				15BF649024153284006F865F /* ViewController.swift in Sources */,
+				15BF649024153284006F865F /* TimeLineViewController.swift in Sources */,
 				5906512F241F4F40001930B3 /* APIClient.swift in Sources */,
 				15236DFE24211316006050AE /* PostCellViewModel.swift in Sources */,
 				15BF64D0241543FB006F865F /* CommentResponse.swift in Sources */,

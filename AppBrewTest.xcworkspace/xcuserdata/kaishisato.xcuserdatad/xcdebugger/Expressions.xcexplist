@@ -3,10 +3,24 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "ViewController.postNoImageCell(indexPath:post:):ViewController.swift">
+         contextName = "RecommendCollectionViewCell.update(post:):RecommendCollectionViewCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in PostViewModel.updateItems(page:):PostViewModel.swift">
          <PersistentStrings>
             <PersistentString
-               value = "R.nib.postNoImgaeCollectionViewCell.name">
+               value = "self.items.value.count">
+            </PersistentString>
+            <PersistentString
+               value = "result.posts.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in RecommendCollectionViewCell.update(post:):RecommendCollectionViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "image?.size">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -15,6 +29,22 @@
          <PersistentStrings>
             <PersistentString
                value = "cell?.mainImageView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.postNoImageCell(indexPath:post:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "R.nib.postNoImgaeCollectionViewCell.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RecommendCollectionViewCell.preferredLayoutAttributesFitting(_:):RecommendCollectionViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mainImageView.image?.size">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -30,21 +60,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "RecommendCollectionViewCell.update(post:):RecommendCollectionViewCell.swift">
-      </ContextState>
-      <ContextState
-         contextName = "RecommendCollectionViewCell.preferredLayoutAttributesFitting(_:):RecommendCollectionViewCell.swift">
+         contextName = "ViewController.collectionView(_:willDisplay:forItemAt:):ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.mainImageView.image?.size">
+               value = "indexPath.item">
             </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in RecommendCollectionViewCell.update(post:):RecommendCollectionViewCell.swift">
-         <PersistentStrings>
             <PersistentString
-               value = "image?.size">
+               value = "viewModel.items.value.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

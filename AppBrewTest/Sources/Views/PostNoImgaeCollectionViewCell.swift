@@ -98,6 +98,9 @@ class PostNoImgaeCollectionViewCell: UICollectionViewCell {
             iconImageView.sd_setImage(with: URL(string: iconUrl))
         }
         if let productTag = post.product_tags.first {
+            productView.isHidden = false
+            lineView.isHidden = false
+            rateView.isHidden = false
             rateView.setRate(rate: productTag?.rate ?? 0)
             productNameLabel.text = productTag?.product.name
             brandNameLabel.text = productTag?.product.brand?.name
@@ -105,6 +108,7 @@ class PostNoImgaeCollectionViewCell: UICollectionViewCell {
         } else {
             productView.isHidden = true
             lineView.isHidden = true
+            rateView.isHidden = true
         }
 
     }
@@ -118,7 +122,12 @@ class PostNoImgaeCollectionViewCell: UICollectionViewCell {
         nameLabel.text = nil
         descriptionLabel.text = nil
         iconImageView.image = nil
-        likeButton.titleLabel?.text = nil
+        productImageView.image = nil
+        productNameLabel.text = nil
+        brandNameLabel.text = nil
+        likeCountLabel.text = nil
+        commentCountLabel.text = nil
+        clipCountLabel.text = nil
         iconImageView.sd_cancelCurrentImageLoad()
         productImageView.sd_cancelCurrentImageLoad()
     }

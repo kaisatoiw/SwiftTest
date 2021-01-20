@@ -1,5 +1,3 @@
-# AppbrewTest
-Appbrewテスト用
 
 ## Building the code
 ```

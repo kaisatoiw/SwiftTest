@@ -1,8 +1,8 @@
 
 ## Building the code
 ```
-$ git clone https://your-username@github.com/kaisatoiw/AppbrewTest.git
-$ cd AppbrewTest
+$ git clone https://github.com/kaisatoiw/SwiftTest.git
+$ cd SwiftTest
 $ pod install
 ```
 
